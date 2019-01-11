@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.videostoreDataSet = new KursachVideoprokat.VideostoreDataSet();
-            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.klientTableAdapter = new KursachVideoprokat.VideostoreDataSetTableAdapters.KlientTableAdapter();
-            this.tableAdapterManager = new KursachVideoprokat.VideostoreDataSetTableAdapters.TableAdapterManager();
             this.klientBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -53,36 +49,16 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.videostoreDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
+            this.klientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.videostoreDataSet = new KursachVideoprokat.VideostoreDataSet();
+            this.klientTableAdapter = new KursachVideoprokat.VideostoreDataSetTableAdapters.KlientTableAdapter();
+            this.tableAdapterManager = new KursachVideoprokat.VideostoreDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingNavigator)).BeginInit();
             this.klientBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klientDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videostoreDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // videostoreDataSet
-            // 
-            this.videostoreDataSet.DataSetName = "VideostoreDataSet";
-            this.videostoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // klientBindingSource
-            // 
-            this.klientBindingSource.DataMember = "Klient";
-            this.klientBindingSource.DataSource = this.videostoreDataSet;
-            // 
-            // klientTableAdapter
-            // 
-            this.klientTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.BlacklistTableAdapter = null;
-            this.tableAdapterManager.FilmTableAdapter = null;
-            this.tableAdapterManager.JournalTableAdapter = null;
-            this.tableAdapterManager.KlientTableAdapter = this.klientTableAdapter;
-            this.tableAdapterManager.UchetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = KursachVideoprokat.VideostoreDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // klientBindingNavigator
             // 
@@ -149,14 +125,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -164,7 +140,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -173,13 +149,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -196,7 +172,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // klientBindingNavigatorSaveItem
@@ -204,7 +180,7 @@
             this.klientBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.klientBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("klientBindingNavigatorSaveItem.Image")));
             this.klientBindingNavigatorSaveItem.Name = "klientBindingNavigatorSaveItem";
-            this.klientBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.klientBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.klientBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.klientBindingNavigatorSaveItem.Click += new System.EventHandler(this.klientBindingNavigatorSaveItem_Click);
             // 
@@ -255,6 +231,30 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Номер_паспорта";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // klientBindingSource
+            // 
+            this.klientBindingSource.DataMember = "Klient";
+            this.klientBindingSource.DataSource = this.videostoreDataSet;
+            // 
+            // videostoreDataSet
+            // 
+            this.videostoreDataSet.DataSetName = "VideostoreDataSet";
+            this.videostoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // klientTableAdapter
+            // 
+            this.klientTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.BlacklistTableAdapter = null;
+            this.tableAdapterManager.FilmTableAdapter = null;
+            this.tableAdapterManager.JournalTableAdapter = null;
+            this.tableAdapterManager.KlientTableAdapter = this.klientTableAdapter;
+            this.tableAdapterManager.UchetTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = KursachVideoprokat.VideostoreDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,12 +265,12 @@
             this.Name = "Form2";
             this.Text = "Клиент";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.videostoreDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klientBindingNavigator)).EndInit();
             this.klientBindingNavigator.ResumeLayout(false);
             this.klientBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.klientDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.klientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videostoreDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

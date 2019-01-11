@@ -95,6 +95,9 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="VideostoreDataSet.cs">
+      <DependentUpon>VideostoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VideostoreDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -31,5 +31,7 @@ namespace KursachVideoprokat
             this.klientTableAdapter.Fill(this.videostoreDataSet.Klient);
 
         }
+
+        
     }
 }
